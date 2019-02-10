@@ -1,0 +1,90 @@
+
+
+<div *ngFor="let box of arrets" class="box" appDroppable (dragStart)="currentBox = box">
+	{{ box }}
+	<div class="box box-helper" *appDraggableHelper>{{ box }}</div>
+</div>
+
+ 
+
+<table id="#our_table" border="1">
+	<tr>
+		<th>semaine 1</th>
+		<th>semaine 2</th>
+		<th>semaine 3</th>
+		<th>semaine 4</th>
+		<th>semaine 5</th>
+		<th>semaine 6</th>
+		<th>semaine 7</th>
+		<th>semaine 8</th>
+	</tr>
+	<tr  >
+
+		<td>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine1Tranche1,1)" (remove)="move(currentBox, arrets,1)">
+				<div *ngFor="let box of semaine1Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine2Tranche1,2)" (remove)="move(currentBox, arrets,2)">
+				<div *ngFor="let box of semaine2Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine3Tranche1,3)" (remove)="move(currentBox, arrets,3)">
+				<div *ngFor="let box of semaine3Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine4Tranche1,4)" (remove)="move(currentBox, arrets,4)">
+				<div *ngFor="let box of semaine4Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine5Tranche1,5)" (remove)="move(currentBox, arrets,5)">
+				<div *ngFor="let box of semaine5Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine6Tranche1,6)" (remove)="move(currentBox, arrets,6)">
+				<div *ngFor="let box of semaine6Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine7Tranche1,7)" (remove)="move(currentBox, arrets,7)">
+				<div *ngFor="let box of semaine7Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+		<td appDroppable>
+			<div class="dropzone" appDropzone (drop)="move(currentBox, semaine8Tranche1,8)" (remove)="move(currentBox, arrets,8)">
+				<div *ngFor="let box of semaine8Tranche1" class="box" appDroppable (dragStart)="currentBox = box">
+					{{ box }}
+
+				</div>
+			</div>
+		</td>
+	</tr>
+
+</table>
